@@ -125,8 +125,11 @@ let handler _con req body =
 ;;
 
 let start_server =
+  let open Lwt.Syntax in
   let server = Server.make ~callback:handler () in
-  Server.create ~mode:(`TCP (`Port 8000)) server
+  let* ctx = Conduit_lwt_unix.init ~src:"0.0.0.0" () in
+  let ctx = Cohttp_lwt_unix.Client.custom_ctx ~ctx () in
+  Server.create ~ctx ~mode:(`TCP (`Port 8000)) server
 ;;
 
 Lwt_main.run start_server
