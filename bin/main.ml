@@ -81,9 +81,9 @@ let render frame =
 let frame () =
   let frame =
     { title = "Simple Frame"
-    ; image = "https://da23-12-170-106-2.ngrok-free.app/image"
+    ; image = "http://ec2-44-204-6-140.compute-1.amazonaws.com:8000/image"
     ; buttons = [ { content = "+" }; { content = "-" } ]
-    ; post_url = "https://da23-12-170-106-2.ngrok-free.app/post"
+    ; post_url = "http://ec2-44-204-6-140.compute-1.amazonaws.com:8000/post"
     }
   in
   let html = render frame in
