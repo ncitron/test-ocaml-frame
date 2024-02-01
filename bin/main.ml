@@ -129,7 +129,7 @@ let start_server =
   let server = Server.make ~callback:handler () in
   let* ctx = Conduit_lwt_unix.init ~src:"0.0.0.0" () in
   let ctx = Cohttp_lwt_unix.Client.custom_ctx ~ctx () in
-  Server.create ~ctx ~mode:(`TCP (`Port 443)) server
+  Server.create ~ctx ~mode:(`TCP (`Port 8000)) server
 ;;
 
 Lwt_main.run start_server
