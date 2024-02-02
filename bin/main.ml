@@ -81,9 +81,9 @@ let render frame =
 let frame () =
   let frame =
     { title = "Simple Frame"
-    ; image = "http://44.204.6.140:8000/image"
+    ; image = "https://simple-frame.ncitron.org/image"
     ; buttons = [ { content = "+" }; { content = "-" } ]
-    ; post_url = "http://44.204.6.140:8000/post"
+    ; post_url = "https://simple-frame.ncitron.org/image"
     }
   in
   let html = render frame in
