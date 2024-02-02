@@ -72,7 +72,7 @@ let render frame =
       </html>
     |}
     frame.title
-    frame.image
+    (frame.image ^ "/" ^ (string_of_float (Unix.time ())))
     (frame.image ^ "/" ^ (string_of_float (Unix.time ())))
     frame.post_url
     buttons
