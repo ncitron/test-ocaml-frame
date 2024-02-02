@@ -83,7 +83,7 @@ let frame () =
     { title = "Simple Frame"
     ; image = "https://simple-frame.ncitron.org/image"
     ; buttons = [ { content = "+" }; { content = "-" } ]
-    ; post_url = "https://simple-frame.ncitron.org/image"
+    ; post_url = "https://simple-frame.ncitron.org/post"
     }
   in
   let html = render frame in
